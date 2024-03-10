@@ -1,0 +1,19 @@
+{% include 'navbar.html' %}
+
+<div class="container mt-5">
+    <div class="card mx-auto" style="max-width: 400px;">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Edit Comment</h2>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="new_text">Edit your comment:</label>
+                    <textarea class="form-control" name="new_text" rows="4">{{ comment.text }}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</div>
